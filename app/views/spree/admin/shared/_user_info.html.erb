@@ -1,0 +1,4 @@
+<dt><%= Spree.t('referral_url') %></dt>
+<dd><%= referral_url(@user.referral.code) %></dd>
+<dt><%= Spree.t('referred_users') %></dt>
+<dd><%= @user.referred_count%></dd>

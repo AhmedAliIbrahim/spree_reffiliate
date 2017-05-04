@@ -2,12 +2,16 @@
   <div class="alpha six columns">
     <%= f.field_container :name do %>
       <%= f.label :name, Spree.t(:name) %>
-      <%= f.text_field :name, class: 'fullwidth' %>
+      <div class="form-group">
+        <%= f.text_field :name, class: 'form-control' %>
+      </div>
       <%= error_message_on :user, :name %>
     <% end %>
     <%= f.field_container :partial do %>
       <%= f.label :partial, Spree.t(:partial) + " (leave blank if no partial) " %>
-      <p>app/views/spree/affiliates/<%= f.text_field :partial %></p>
+      <div class="form-group">
+        <p> app/views/spree/affiliates/<%= f.text_field :partial, class: 'form-control' %></p>
+      </div>
       <%= f.error_message_on :partial %>
     <% end %>
   </div>
@@ -15,13 +19,19 @@
   <div class="omega six columns">
     <%= f.field_container :path do %>
       <%= f.label :path, Spree.t(:path) %>
-      <%= f.text_field :path, class: 'fullwidth' %>
+      <div class="form-group">
+        <%= f.text_field :path, class: 'form-control' %>
+      </div>
       <%= f.error_message_on :path %>
     <% end %>
     <%= f.field_container :path do %>
       <%= f.label :layout, Spree.t(:layout) %>
-      <%= select_tag 'fake_layout', options_for_select(@layout_options, selected: @affiliate.layout), class: "fullwidth #{'other' unless @layout_options.flatten.include?(@affiliate.layout)}" %>
-      <%= f.text_field :layout, value: @affiliate.layout.nil? ? @layout_options.first : @affiliate.layout, class: 'fullwidth' %>
+      <div class="form-group">
+        <%= select_tag 'fake_layout', options_for_select(@layout_options, selected: @affiliate.layout), class: "form-control #{'other' unless @layout_options.flatten.include?(@affiliate.layout)}" %>
+      </div>
+      <div class="form-group">
+        <%= f.text_field :layout, value: @affiliate.layout.nil? ? @layout_options.first : @affiliate.layout, class: 'form-control' %>
+      </div>
       <script>
         var fake_layout = $("#fake_layout"),
             affiliate_layout = $("#affiliate_layout");

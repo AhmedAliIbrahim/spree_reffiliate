@@ -2,7 +2,7 @@ Deface::Override.new(
   :virtual_path => "spree/admin/users/index",
   :name => "referral_code_header",
   :insert_before => "[data-hook='admin_users_index_headers'] th:nth-child(2)",
-  :text => "<th class='align-center'>Referrals</th>"
+  :text => "<th class='align-center'><%= Spree.t('referrals') %></th>"
 )
 Deface::Override.new(
   :virtual_path => "spree/admin/users/index",

@@ -8,3 +8,16 @@ en:
         name: "Affiliate User"
         description: "Must be an affiliated user"
     editing_affiliate: "Editing Affiliate:" 
+    referral_info: "Referral Information"
+    referred_by: "Referred by"
+    referral_code: "Referral Code"
+    referred_orders: "Referred orders"
+    users_referred: "Users referred"
+    none: "None"
+    no_referred_orders: "No referred orders yet."
+    no_referred_users: "No referred users yet."
+    referrals: "Referrals"
+    referral_url: "Referral Url"
+    
+    
+    
